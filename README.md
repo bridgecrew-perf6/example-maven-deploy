@@ -8,20 +8,20 @@ mvn deploy
 
 ## important files
 
-### pom.xml 
+#### pom.xml 
 - should have `<distributionManagement>`
 
-### settings.xml
+#### settings.xml
 - `<servers><server><id>` block with id should be matching with `<distributionManagement><repository><id>` where we want to deploy
-- The Maven install: ${maven.home}/conf/settings.xml
-- A user's install: ${user.home}/.m2/settings.xml
+- The Maven install: `${maven.home}/conf/settings.xml`
+- A user's install: `${user.home}/.m2/settings.xml`
 
 ### Note:
 - Repo type should be hosted else it will give 405 error
 - If you upload the same build it will give 400 error
 - Need to update `<version>` in pom.xml if you need to publish with same name 
 
-### docker run sonatype/nexus3
+#### docker run sonatype/nexus3
 ```sh
 docker run -d -p 8081:8081 --name nexus sonatype/nexus3
 ```
