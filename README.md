@@ -12,7 +12,7 @@ mvn deploy
 - should have `<distributionManagement>`
 
 #### settings.xml
-- `<servers><server><id>` block with id should be matching with `<distributionManagement><repository><id>` where we want to deploy
+- settings.xml `<servers><server><id>` block with id should be matching with pom.xml `<distributionManagement><repository><id>` where we want to deploy
 - The Maven install: `${maven.home}/conf/settings.xml`
 - A user's install: `${user.home}/.m2/settings.xml`
 
